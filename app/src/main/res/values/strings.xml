@@ -1,0 +1,44 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="app_name">Zmanim</string>
+    <string name="settings">settings</string>
+    <string name="title_activity_settings">SettingsActivity</string>
+
+    <!-- Preference Titles -->
+
+    <!-- Messages Preferences -->
+    <string name="city_selector">Select your city</string>
+
+    <!-- Sync Preferences -->
+    <string name="alot_hashachar" tools:ignore="Typos">Alot Hashachar</string>
+    <string name="netz">Netz</string>
+    <string name="shema">שמע</string>
+    <string name="maguen_avraham">Maguen Avraham</string>
+    <string name="gra">GRA</string>
+    <string name="chatzot">Chatzot</string>
+    <string name="hadlakat_nerot">Hadlakat Nerot</string>
+    <string name="shkiat_hachama">Shkiat HaChamá</string>
+    <string name="tzet_hacochavim">Tzet HaCochavim</string>
+    <string name="tzet_hashabat">Tzet HaShabat</string>
+    <string name="rabenu_tam">Rabenu Tam</string>
+    <string name="configure">Configure</string>
+    <string name="add_widget">Add widget</string>
+    <string name="right">right</string>
+    <string name="left">left</string>
+    <string name="location">location</string>
+    <string name="next_day">next day</string>
+    <string name="last_day">last day</string>
+    <string name="permission_denied">Unable to show location - permission required</string>
+    <string name="settings_cap">Settings</string>
+    <string name="maguen_avraham_short">MA</string>
+    <string name="gra_short">GRA</string>
+
+
+    <string name="jerusalem">JERUSALEM</string>
+    <string name="tiberias">TIBERIAS</string>
+    <string name="haifa">HAIFA</string>
+    <string name="tel_aviv">TEL AVIV</string>
+    <string name="modiin">MODIIN</string>
+    <string name="tzfat">TZFAT</string>
+
+
+</resources>

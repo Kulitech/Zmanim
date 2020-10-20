@@ -1,0 +1,24 @@
+<resources>
+    <string-array name="city_names">
+        <item>@string/jerusalem</item>
+        <item>@string/haifa</item>
+        <item>@string/tiberias</item>
+        <item>@string/tzfat</item>
+        <item>@string/modiin</item>
+        <item>@string/tel_aviv</item>
+    </string-array>
+
+
+    <string-array name="cities">
+        <item>jerusalem,31.768318,35.213711</item>
+        <item>haifa,32.794044,34.989571</item>
+        <item>tiberias,32.796532,35.529701</item>
+        <item>tzfat,32.969450,35.497510</item>
+        <item>modiin,31.908574,35.006929</item>
+        <item>tel_aviv,32.080480,34.780527</item>
+    </string-array>
+
+
+
+
+</resources>

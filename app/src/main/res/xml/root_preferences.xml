@@ -1,0 +1,38 @@
+<PreferenceScreen xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <PreferenceCategory app:title="@string/location">
+
+        <!--EditTextPreference
+            app:key="signature"
+            app:title="@string/signature_title"
+            app:useSimpleSummaryProvider="true" /-->
+
+
+
+        <ListPreference
+            app:defaultValue="jerusalem,31.768318,35.213711"
+            app:entries="@array/city_names"
+            app:entryValues="@array/cities"
+            app:icon="@drawable/ic_baseline_location_on_24"
+            app:key="city"
+            app:summary="@string/city_selector"
+            app:useSimpleSummaryProvider="true" />
+
+    </PreferenceCategory>
+
+<!--    <PreferenceCategory app:title="@string/sync_header">-->
+
+<!--        <SwitchPreferenceCompat-->
+<!--            app:key="sync"-->
+<!--            app:title="@string/sync_title" />-->
+
+<!--        <SwitchPreferenceCompat-->
+<!--            app:dependency="sync"-->
+<!--            app:key="attachment"-->
+<!--            app:summaryOff="@string/attachment_summary_off"-->
+<!--            app:summaryOn="@string/attachment_summary_on"-->
+<!--            app:title="@string/attachment_title" />-->
+
+<!--    </PreferenceCategory>-->
+
+</PreferenceScreen>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">זמנים</string>
+    <string name="settings">הגדרות</string>
+    <string name="alot_hashachar">עלות השחר</string>
+    <string name="netz">נץ החמה</string>
+    <string name="shema">שמע</string>
+    <string name="maguen_avraham">מגן אברהם</string>
+    <string name="gra">גר\"א</string>
+    <string name="chatzot">חצות</string>
+    <string name="hadlakat_nerot">הדלקת נרות</string>
+    <string name="shkiat_hachama">שקיעת החמה</string>
+    <string name="tzet_hacochavim">צאת הכוכבים</string>
+    <string name="tzet_hashabat">צאת השבת</string>
+    <string name="rabenu_tam">רבינו תם</string>
+    <string name="right">ימינה</string>
+    <string name="left">שמאולה</string>
+    <string name="location">מיקום</string>
+    <string name="next_day">יום הבא</string>
+    <string name="last_day">יום שעבר</string>
+    <string name="permission_denied">אי אפשר להציג מיקום. אישור נצרך</string>
+    <string name="settings_cap">הגדרות</string>
+    <string name="maguen_avraham_short">מ\"א</string>
+    <string name="gra_short">גר\"א</string>
+    <string name="jerusalem">ירושלים</string>
+    <string name="tiberias">טבריה</string>
+    <string name="haifa">חיפה</string>
+    <string name="tel_aviv">תל אביב</string>
+    <string name="modiin">מודיעין</string>
+    <string name="tzfat">צפת</string>
+    <string name="city_selector">בחר מיקום</string>
+    <string name="configure">הגדר</string>
+    <string name="add_widget">הוסף ווידג\'ת</string>
+    <string name="title_activity_settings">הגדרות</string>
+</resources>

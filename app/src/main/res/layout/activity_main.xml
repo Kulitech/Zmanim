@@ -1,0 +1,474 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="MissingConstraints">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.rkulikowsky.zmanim.MainActivityViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:background="#6B1E62E9"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/topAppBar"
+            style="@style/Widget.MaterialComponents.Toolbar.Primary"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:titleTextAppearance="@style/Widget.MyText.TextView">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="@{viewModel.zmanim.title}"
+                android:textAlignment="center"
+                android:textColor="@color/primaryTextColor"
+                android:textSize="16sp" />
+        </com.google.android.material.appbar.MaterialToolbar>
+
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/alotCard"
+            style="@style/MyCard"
+            app:cardBackgroundColor="@color/primaryLightColor"
+            app:cardElevation="6dp"
+            app:layout_constraintBottom_toTopOf="@+id/netzCard"
+            app:layout_constraintTop_toBottomOf="@id/topAppBar"
+            tools:layout_editor_absoluteX="1dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/alotImg"
+                    android:contentDescription="@string/alot_hashachar"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/alot"
+                    style="@style/MyImageView" />
+
+                <TextView
+                    android:id="@+id/txtAlot"
+                    style="@style/Widget.MyText.TextView"
+                    android:layout_toStartOf="@id/txtAlotValue"
+                    android:layout_toEndOf="@id/alotImg"
+                    android:text="@string/alot_hashachar" />
+
+                <TextView
+                    android:id="@+id/txtAlotValue"
+                    style="@style/Widget.MyText.TextView"
+                    android:layout_width="100dp"
+                    android:layout_alignParentEnd="true"
+                    android:text="@{viewModel.zmanim.alotHaShachar}" />
+            </RelativeLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/netzCard"
+            style="@style/MyCard"
+            app:cardBackgroundColor="@color/primaryLightColor"
+            app:cardElevation="6dp"
+            app:layout_constraintBottom_toTopOf="@+id/kSMACard"
+            app:layout_constraintTop_toBottomOf="@+id/alotCard"
+            tools:layout_editor_absoluteX="16dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/netzImg"
+                    android:contentDescription="@string/netz"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/sunrise"
+                    style="@style/MyImageView" />
+
+                <TextView
+                    android:id="@+id/txtNetz"
+                    style="@style/Widget.MyText.TextView"
+                    android:layout_toStartOf="@id/txtNetzValue"
+                    android:layout_toEndOf="@id/netzImg"
+                    android:text="@string/netz" />
+
+                <TextView
+                    android:id="@+id/txtNetzValue"
+                    style="@style/Widget.MyText.TextView"
+                    android:layout_width="100dp"
+                    android:layout_alignParentEnd="true"
+                    android:text="@{viewModel.zmanim.netz}" />
+            </RelativeLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/kSMACard"
+            style="@style/MyCard"
+            app:cardBackgroundColor="@color/primaryLightColor"
+            app:cardElevation="6dp"
+            app:layout_constraintBottom_toTopOf="@+id/kSGRACard"
+            app:layout_constraintTop_toBottomOf="@+id/netzCard"
+            tools:layout_editor_absoluteX="16dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/kSMAImg"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="5dp"
+                    android:gravity="center"
+                    android:text="@string/shema"
+                    android:textAlignment="center"
+                    android:textColor="#FFC107"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/txtkSMA"
+                    style="@style/Widget.MyText.TextView"
+                    android:layout_toStartOf="@id/txtKSMAValue"
+                    android:layout_toEndOf="@id/kSMAImg"
+                    android:text="@string/maguen_avraham" />
+
+                <TextView
+                    android:id="@+id/txtKSMAValue"
+                    style="@style/Widget.MyText.TextView"
+                    android:layout_width="100dp"
+                    android:layout_alignParentEnd="true"
+                    android:text="@{viewModel.zmanim.kSMaguen}" />
+            </RelativeLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/kSGRACard"
+            style="@style/MyCard"
+            app:cardBackgroundColor="@color/primaryLightColor"
+            app:cardElevation="6dp"
+            app:layout_constraintBottom_toTopOf="@+id/chatzotCard"
+            app:layout_constraintTop_toBottomOf="@+id/kSMACard"
+            tools:layout_editor_absoluteX="16dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/kSGRAImg"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="5dp"
+                    android:gravity="center"
+                    android:text="@string/shema"
+                    android:textAlignment="center"
+                    android:textColor="#FFC107"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/txtKSGRA"
+                    style="@style/Widget.MyText.TextView"
+                    android:layout_toStartOf="@id/txtKSGRAValue"
+                    android:layout_toEndOf="@id/kSGRAImg"
+                    android:text="@string/gra" />
+
+                <TextView
+                    android:id="@+id/txtKSGRAValue"
+                    style="@style/Widget.MyText.TextView"
+                    android:layout_width="100dp"
+                    android:layout_alignParentEnd="true"
+                    android:text="@{viewModel.zmanim.kSGra}" />
+            </RelativeLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/chatzotCard"
+            style="@style/MyCard"
+            app:cardBackgroundColor="@color/primaryLightColor"
+            app:cardElevation="6dp"
+            app:layout_constraintBottom_toTopOf="@+id/hadlakaCard"
+            app:layout_constraintTop_toBottomOf="@+id/kSGRACard"
+            tools:layout_editor_absoluteX="16dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/chatzotImg"
+                    android:contentDescription="@string/chatzot"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/midday"
+                    style="@style/MyImageView" />
+
+                <TextView
+                    android:id="@+id/txtChatzot"
+                    style="@style/Widget.MyText.TextView"
+                    android:layout_toStartOf="@id/txtChatzotValue"
+                    android:layout_toEndOf="@id/chatzotImg"
+                    android:text="@string/chatzot" />
+
+                <TextView
+                    android:id="@+id/txtChatzotValue"
+                    style="@style/Widget.MyText.TextView"
+                    android:layout_width="100dp"
+                    android:layout_alignParentEnd="true"
+                    android:text="@{viewModel.zmanim.chatzot}" />
+            </RelativeLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/hadlakaCard"
+            style="@style/MyCard"
+            app:cardBackgroundColor="@color/primaryLightColor"
+            app:cardElevation="6dp"
+            app:layout_constraintBottom_toTopOf="@+id/shkiáCard"
+            app:layout_constraintTop_toBottomOf="@+id/chatzotCard"
+            tools:layout_editor_absoluteX="16dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/hadlakaImg"
+                    android:contentDescription="@string/hadlakat_nerot"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/candles"
+                    style="@style/MyImageView" />
+
+                <TextView
+                    android:id="@+id/txtHadlaká"
+                    style="@style/Widget.MyText.TextView"
+                    android:layout_toStartOf="@id/txtHadlakaValue"
+                    android:layout_toEndOf="@id/hadlakaImg"
+                    android:text="@string/hadlakat_nerot" />
+
+                <TextView
+                    android:id="@+id/txtHadlakaValue"
+                    style="@style/Widget.MyText.TextView"
+                    android:layout_width="100dp"
+                    android:layout_alignParentEnd="true"
+                    android:text="@{viewModel.zmanim.hadlaka}" />
+            </RelativeLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/shkiáCard"
+            style="@style/MyCard"
+            app:cardBackgroundColor="@color/primaryLightColor"
+            app:cardElevation="6dp"
+            app:layout_constraintBottom_toTopOf="@+id/tzetHacochavimCard"
+            app:layout_constraintTop_toBottomOf="@+id/hadlakaCard"
+            tools:layout_editor_absoluteX="16dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/shkiáImg"
+                    android:contentDescription="@string/shkiat_hachama"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/sunset"
+                    style="@style/MyImageView" />
+
+                <TextView
+                    android:id="@+id/txtShkiá"
+                    style="@style/Widget.MyText.TextView"
+                    android:layout_toStartOf="@id/txtShkiáValue"
+                    android:layout_toEndOf="@id/shkiáImg"
+                    android:text="@string/shkiat_hachama" />
+
+                <TextView
+                    android:id="@+id/txtShkiáValue"
+                    style="@style/Widget.MyText.TextView"
+                    android:layout_width="100dp"
+                    android:layout_alignParentEnd="true"
+                    android:text="@{viewModel.zmanim.shkia}" />
+            </RelativeLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/tzetHacochavimCard"
+            style="@style/MyCard"
+            app:cardBackgroundColor="@color/primaryLightColor"
+            app:cardElevation="6dp"
+            app:layout_constraintBottom_toTopOf="@+id/tzetShabatCard"
+            app:layout_constraintTop_toBottomOf="@+id/shkiáCard"
+            tools:layout_editor_absoluteX="16dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/tzetHacochavimImg"
+                    android:contentDescription="@string/tzet_hacochavim"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/tzet"
+                    style="@style/MyImageView" />
+
+                <TextView
+                    android:id="@+id/txtTzetHacochavim"
+                    style="@style/Widget.MyText.TextView"
+                    android:layout_toStartOf="@id/txtTzetHacochavimValue"
+                    android:layout_toEndOf="@id/tzetHacochavimImg"
+                    android:text="@string/tzet_hacochavim" />
+
+                <TextView
+                    android:id="@+id/txtTzetHacochavimValue"
+                    style="@style/Widget.MyText.TextView"
+                    android:layout_width="100dp"
+                    android:layout_alignParentEnd="true"
+                    android:text="@{viewModel.zmanim.tzet}" />
+            </RelativeLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/tzetShabatCard"
+            style="@style/MyCard"
+            app:cardBackgroundColor="@color/primaryLightColor"
+            app:cardElevation="6dp"
+            app:layout_constraintBottom_toTopOf="@+id/rTCard"
+            app:layout_constraintTop_toBottomOf="@+id/tzetHacochavimCard"
+            tools:layout_editor_absoluteX="16dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/tzetShabatImg"
+                    android:contentDescription="@string/tzet_hashabat"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/tzet"
+                    style="@style/MyImageView" />
+
+                <TextView
+                    android:id="@+id/txtTzetShabat"
+                    style="@style/Widget.MyText.TextView"
+                    android:layout_toStartOf="@id/txtTzetShabatValue"
+                    android:layout_toEndOf="@id/tzetShabatImg"
+                    android:text="@string/tzet_hashabat" />
+
+                <TextView
+                    android:id="@+id/txtTzetShabatValue"
+                    style="@style/Widget.MyText.TextView"
+                    android:layout_width="100dp"
+                    android:layout_alignParentEnd="true"
+                    android:text="@{viewModel.zmanim.tzetShabat}" />
+            </RelativeLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/rTCard"
+            style="@style/MyCard"
+            app:cardBackgroundColor="@color/primaryLightColor"
+            app:cardElevation="6dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tzetShabatCard"
+            tools:layout_editor_absoluteX="16dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/rTImg"
+                    android:contentDescription="@string/rabenu_tam"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/tzet"
+                    style="@style/MyImageView" />
+
+                <TextView
+                    android:id="@+id/txtRT"
+                    style="@style/Widget.MyText.TextView"
+                    android:layout_toStartOf="@id/txtRTValue"
+                    android:layout_toEndOf="@id/rTImg"
+                    android:text="@string/rabenu_tam" />
+
+                <TextView
+                    android:id="@+id/txtRTValue"
+                    style="@style/Widget.MyText.TextView"
+                    android:layout_width="100dp"
+                    android:layout_alignParentEnd="true"
+                    android:text="@{viewModel.zmanim.rabenuTam}" />
+            </RelativeLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="60dp"
+            android:layout_height="100dp"
+            android:background="@android:color/transparent"
+            android:contentDescription="@string/right"
+            android:elevation="8dp"
+            android:onClick="@{() -> viewModel.rightClicked()}"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_baseline_chevron_right_96"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:padding="2dp"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:text="@string/next_day"
+            android:textAlignment="center"
+            android:textColor="@color/primaryColor"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/hadlakaCard"
+            app:layout_constraintTop_toBottomOf="@+id/imageView"
+            app:layout_constraintVertical_bias="0" />
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="60dp"
+            android:layout_height="100dp"
+            android:background="@android:color/transparent"
+            android:contentDescription="@string/left"
+            android:elevation="8dp"
+            android:onClick="@{() -> viewModel.leftClicked()}"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_baseline_chevron_left_96"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:padding="2dp"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:text="@string/last_day"
+            android:textAlignment="center"
+            android:textColor="@color/primaryColor"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/hadlakaCard"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintVertical_bias="0"
+            app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</layout>

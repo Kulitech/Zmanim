@@ -1,0 +1,136 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:paddingEnd="5dp"
+    android:paddingStart="5dp"
+    android:paddingBottom="5dp"
+    android:paddingTop="5dp"
+    tools:ignore="NestedWeights"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/widget_background_layout"
+    android:orientation="vertical"
+    android:padding="@dimen/widget_margin">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/appwidget_text"
+            tools:text="@string/netz"
+            style="@style/Widget.MyText.TextView"
+            />
+
+    </LinearLayout>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    android:layout_weight="1"
+    android:gravity="center"
+    android:orientation="horizontal">
+    <ImageView
+        android:contentDescription="@string/netz"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:src="@drawable/sunrise"/>
+    <TextView
+        android:id="@+id/widget_netz"
+        android:layout_weight="1"
+        tools:text="@string/netz"
+        style="@style/Widget.MyText.TextView"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/maguen_avraham_short"
+        android:textAlignment="center"
+        android:textColor="#FFC107"
+        android:textSize="14sp"
+        android:textStyle="bold" />
+    <TextView
+        android:id="@+id/widget_ma"
+        android:layout_weight="1"
+        tools:text="@string/maguen_avraham_short"
+        style="@style/Widget.MyText.TextView"
+         />
+
+</LinearLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/primaryLightColor"/>
+
+    <LinearLayout
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+        <ImageView
+            android:contentDescription="@string/chatzot"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/midday"/>
+        <TextView
+            android:id="@+id/widget_chatzot"
+            android:layout_weight="1"
+            tools:text="@string/chatzot"
+            style="@style/Widget.MyText.TextView"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/gra_short"
+            android:textAlignment="center"
+            android:textColor="#FFC107"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+        <TextView
+            android:id="@+id/widget_gra"
+            android:layout_weight="1"
+            tools:text="@string/gra_short"
+            style="@style/Widget.MyText.TextView"
+            />
+
+    </LinearLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/primaryLightColor"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="horizontal">
+        <ImageView
+            android:contentDescription="@string/chatzot"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/sunset"/>
+        <TextView
+            android:id="@+id/widget_shkia"
+            android:layout_weight="1"
+            tools:text="@string/shkiat_hachama"
+            style="@style/Widget.MyText.TextView"
+             />
+        <ImageView
+            android:contentDescription="@string/tzet_hacochavim"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/tzet"/>
+        <TextView
+            android:id="@+id/widget_tzet"
+            android:layout_weight="1"
+            tools:text="@string/tzet_hacochavim"
+            style="@style/Widget.MyText.TextView"
+            />
+
+    </LinearLayout>
+
+</LinearLayout>
